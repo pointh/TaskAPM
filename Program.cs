@@ -33,13 +33,15 @@ namespace Demo
             new Task(async () =>
             {
                 await Program.PrintAsync("a");
-                // After the operation is completed, the control flow will go here.
+
+                // Na tohle nikdy nedojde:
                 Console.WriteLine("Poa");
             }),
             new Task(async () =>
             {
                 await Program.PrintAsync("b");
-                // After the operation is completed, the control flow will go here.
+
+                // Na tohle nikdy nedojde:
                 Console.WriteLine("Pob");
             })};
 
